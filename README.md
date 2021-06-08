@@ -6,7 +6,8 @@ Implementation of PINN from Raissi in Pytorch.
 Continuous Time Inference of Burgers' Equation.
 Cuda version and CPU version.
 
-Cuda version updated, bugs fixed. - 08/06/2021 21:36
+Cuda version updated, bugs fixed. 
+Model parameters saved in .tar. - 08/06/2021 21:36
 
 Existing Issues:
 
