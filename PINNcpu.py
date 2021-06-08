@@ -13,6 +13,11 @@ Created on Wed Jun  2 22:52:07 2021
 """
 #from IPython import get_ipython
 #get_ipython().magic('reset -sf')
+"""
+Cuda version is much more perfect than this cpu version.
+
+"""
+
 import numpy as np
 import numpy.matlib
 import torch
@@ -121,9 +126,9 @@ class PINN(nn.Module):
                                     only_inputs=True)
 
         nu = 0.01/np.pi
-        u_t2 = torch.stack(u_t,1).T
-        u_x2 = torch.stack(u_x,1).T
-        u_xx2 = torch.stack(u_xx,1).T
+        u_t2 = torch.stack(u_t,1)#.T ## got it wrong here. No need for transpose
+        u_x2 = torch.stack(u_x,1)#.T
+        u_xx2 = torch.stack(u_xx,1)#.T
         f = u_t2 + u*u_x2 - nu*u_xx2
         
         return f
@@ -289,15 +294,15 @@ idx = np.random.choice(X_u_train.shape[0], N_u, replace = False)# boundary sampl
 X_u_train2 = X_u_train[idx, :]#boundary samples
 u_train2 = u_train[idx, :]
 
-model0 = PINN(X_u_train2[:,0].T, 
-              X_u_train2[:,1].T, 
-              u_train2, 
-              X_f_train[:,0].T,
-              X_f_train[:,1].T,
-              layers, 
-              20, 
-              2, 
-              1)
+#model0 = PINN(X_u_train2[:,0].T, 
+#              X_u_train2[:,1].T, 
+#              u_train2, 
+#              X_f_train[:,0].T,
+#              X_f_train[:,1].T,
+#              layers, 
+#              20, 
+#              2, 
+#              1)
 model = PINN(X_u_train2[:,0], 
              X_u_train2[:,1], 
              u_train2, 
