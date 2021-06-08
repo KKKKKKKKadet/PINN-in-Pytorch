@@ -6,11 +6,15 @@ Implementation of PINN from Raissi in Pytorch.
 Continuous Time Inference of Burgers' Equation.
 Cuda version and CPU version.
 
+Cuda version updated, bugs fixed. - 08/06/2021 21:36
+
 Existing Issues:
 
-A. Loss not converging well, especially the part on boundaries.
+#A. Loss not converging well, especially the part on boundaries.
 
-B. Currently the optimizer L-BFGS-B as stated in Raissi's paper is not available. 
+#B. Currently the optimizer L-BFGS-B as stated in Raissi's paper is not available. 
+
+Issues solved, Cuda version could reproduce Raissi's result quite well, at least visually. :)))
 
 Discussion and Critics are welcomed.
 
