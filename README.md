@@ -1,4 +1,7 @@
-# PINN-in-Pytorch, Cadet in Neural Network
+# PINN-in-Pytorch
+
+Cadet in Neural Network
+
 Implementation of PINN from Raissi in Pytorch
 Continuous Time Inference of Burgers' Equation
 
