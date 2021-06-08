@@ -2,12 +2,15 @@
 
 Cadet in Neural Network
 
-Implementation of PINN from Raissi in Pytorch
-Continuous Time Inference of Burgers' Equation
+Implementation of PINN from Raissi in Pytorch.
+Continuous Time Inference of Burgers' Equation.
+Cuda version and CPU version.
 
 Existing Issues:
-Loss not converging well, especially the part on boundaries.
-Currently the optimizer L-BFGS-B as stated in Raissi's paper is not available. 
+
+A. Loss not converging well, especially the part on boundaries.
+
+B. Currently the optimizer L-BFGS-B as stated in Raissi's paper is not available. 
 
 Discussion and Critics are welcomed.
 
