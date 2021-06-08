@@ -1,4 +1,4 @@
-# PINN-in-Pytorch
+# Physics Informed Neural Network(PINN)-in-Pytorch
 
 Cadet in Neural Network
 
